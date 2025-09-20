@@ -103,8 +103,30 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label for="location">Khu vực:</label>
+                            <select id="location" name="location">
+                                <option value="ho_chi_minh">TP. Hồ Chí Minh</option>
+                                <option value="ha_noi">Hà Nội</option>
+                                <option value="da_nang">Đà Nẵng</option>
+                                <option value="can_tho">Cần Thơ</option>
+                                <option value="hai_phong">Hải Phòng</option>
+                                <option value="other">Khác</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="importance">Mức độ quan trọng:</label>
+                            <select id="importance" name="importance">
+                                <option value="0.9">Rất quan trọng</option>
+                                <option value="0.8" selected>Quan trọng</option>
+                                <option value="0.6">Bình thường</option>
+                                <option value="0.4">Không quá quan trọng</option>
+                            </select>
+                        </div>
+
                         <button type="submit" class="btn-primary">
-                            <i class="fas fa-search"></i> Xem Ngày Tốt
+                            <i class="fas fa-brain"></i> Phân Tích AI
                         </button>
                     </form>
                 </div>
@@ -125,6 +147,62 @@
         </footer>
     </div>
 
+    <!-- Form Initialization Script -->
+    <script>
+        // Populate form dropdowns
+        document.addEventListener('DOMContentLoaded', function() {
+            // Populate days
+            const daySelect = document.getElementById('birthDay');
+            const fromDaySelect = document.getElementById('fromDay');
+            for (let i = 1; i <= 31; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = i;
+                daySelect.appendChild(option.cloneNode(true));
+            }
+
+            // Populate months
+            const monthSelect = document.getElementById('birthMonth');
+            const fromMonthSelect = document.getElementById('fromMonth');
+            const months = [
+                'Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6',
+                'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'
+            ];
+            months.forEach((month, index) => {
+                const option = document.createElement('option');
+                option.value = index + 1;
+                option.textContent = month;
+                monthSelect.appendChild(option.cloneNode(true));
+                fromMonthSelect.appendChild(option.cloneNode(true));
+            });
+
+            // Populate years
+            const yearSelect = document.getElementById('birthYear');
+            const fromYearSelect = document.getElementById('fromYear');
+            const currentYear = new Date().getFullYear();
+            
+            // Birth years (1950 to current year)
+            for (let i = currentYear; i >= 1950; i--) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = i;
+                yearSelect.appendChild(option);
+            }
+            
+            // From years (current to +5 years)
+            for (let i = currentYear; i <= currentYear + 5; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.textContent = i;
+                fromYearSelect.appendChild(option);
+            }
+
+            // Set default values
+            fromMonthSelect.value = new Date().getMonth() + 1;
+            fromYearSelect.value = currentYear;
+        });
+    </script>
+
     <!-- Ultra Enhanced JavaScript Files với AI và Machine Learning -->
     <script src="ultra-precision-lunar.js"></script>
     <script src="comprehensive-fengshui-db.js"></script>
@@ -141,21 +219,21 @@
             
             // Initialize basic fallback if ultra version fails
             if (e.filename && e.filename.includes('ultra-')) {
-                console.log('Loading fallback system...');
-                var fallbackScripts = [
-                    'lunar-calculator.js',
-                    'good-day-calculator.js', 
-                    'app.js'
-                ];
-                
-                fallbackScripts.forEach(function(script) {
-                    var s = document.createElement('script');
-                    s.src = script;
-                    s.onerror = function() {
-                        console.warn('Fallback script failed:', script);
-                    };
-                    document.head.appendChild(s);
-                });
+                console.error('Ultra Enhanced System failed to load:', e.error);
+                document.body.innerHTML = `
+                    <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+                        <h2 style="color: #e53e3e;">⚠️ Lỗi Tải Hệ Thống</h2>
+                        <p>Hệ thống AI nâng cao gặp sự cố. Vui lòng:</p>
+                        <ul style="display: inline-block; text-align: left;">
+                            <li>Kiểm tra kết nối internet</li>
+                            <li>Refresh lại trang (Ctrl+F5)</li>
+                            <li>Thử lại sau vài phút</li>
+                        </ul>
+                        <button onclick="location.reload()" style="padding: 10px 20px; background: #4299e1; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                            🔄 Thử Lại
+                        </button>
+                    </div>
+                `;
             }
         });
     </script>
