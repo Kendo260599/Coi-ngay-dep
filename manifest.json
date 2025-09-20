@@ -1,0 +1,24 @@
+{
+  "name": "Xem Ngày Tốt - Chọn Ngày Đẹp",
+  "short_name": "Ngày Tốt",
+  "description": "Ứng dụng xem ngày tốt/xấu cho các sự kiện quan trọng",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMjQiIGZpbGw9IiM2NjdlZWEiLz4KPHN2ZyB4PSI0OCIgeT0iNDgiIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+CjxwYXRoIGQ9Ik0xOSAzaDFWMWgtMVYwSDVWMUg0VjNoMVY0SDNWMjBoMlYxOWgxNHYxaDJ2LTE2SDE5VjNaTTE5IDVWMTdINVY1SDE5WiIvPgo8cGF0aCBkPSJNNyA5aDJ2MUg3VjlaIi8+CjxwYXRoIGQ9Ik0xMSA5aDJ2MUgxMVY5WiIvPgo8cGF0aCBkPSJNMTUgOWgydjFIMTVWOVoiLz4KPHN2Zz4KPHN2Zz4=",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iNjQiIGZpbGw9IiM2NjdlZWEiLz4KPHN2ZyB4PSIxMjgiIHk9IjEyOCIgd2lkdGg9IjI1NiIgaGVpZ2h0PSIyNTYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPgo8cGF0aCBkPSJNMTkgM2gxVjFoLTFWMEg1VjFINFYzaDFWNEgzVjIwaDJWMTloMTR2MWgydi0xNkgxOVYzWk0xOSA1VjE3SDVWNUgxOVoiLz4KPHN2Zz4KPHN2Zz4=",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["lifestyle", "utilities"],
+  "lang": "vi"
+}

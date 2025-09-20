@@ -1,0 +1,26 @@
+# GitHub Pages Configuration
+
+# Theme
+theme: jekyll-theme-minimal
+
+# Site settings
+title: "Xem Ngày Tốt - Chọn Ngày Đẹp"
+description: "Ứng dụng web giúp xem ngày tốt/xấu cho các sự kiện quan trọng dựa trên phong thủy Việt Nam"
+url: "https://kendo260599.github.io"
+baseurl: "/Coi-ngay-dep"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Include files
+include:
+  - _config.yml

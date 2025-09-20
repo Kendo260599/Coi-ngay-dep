@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xem Ngày Tốt - Chọn Ngày Đẹp</title>
+    <meta name="description" content="Ứng dụng web giúp xem ngày tốt/xấu cho các sự kiện quan trọng như động thổ, khai trương, nhập trạch, đám cưới dựa trên phong thủy Việt Nam">
+    <meta name="keywords" content="xem ngày tốt, chọn ngày đẹp, phong thủy việt nam, động thổ, khai trương, đám cưới, âm lịch">
+    <meta name="author" content="Kendo260599">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Xem Ngày Tốt - Chọn Ngày Đẹp">
+    <meta property="og:description" content="Ứng dụng web giúp xem ngày tốt/xấu cho các sự kiện quan trọng dựa trên phong thủy Việt Nam">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kendo260599.github.io/Coi-ngay-dep/">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Ngày Tốt">
+    
+    <link rel="stylesheet" href="ultra-enhanced-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-calendar-alt"></i> Xem Ngày Tốt</h1>
+            <p class="subtitle">Chọn ngày đẹp cho các sự kiện quan trọng trong cuộc sống</p>
+        </header>
+
+        <div class="main-content">
+            <div class="input-section">
+                <div class="card">
+                    <h2><i class="fas fa-user"></i> Thông Tin Cá Nhân</h2>
+                    <form id="personalForm">
+                        <div class="form-group">
+                            <label for="fullName">Họ và tên:</label>
+                            <input type="text" id="fullName" name="fullName" required 
+                                   placeholder="Nhập họ và tên đầy đủ">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="birthDay">Ngày sinh:</label>
+                                <select id="birthDay" name="birthDay" required>
+                                    <option value="">Ngày</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="birthMonth">Tháng sinh:</label>
+                                <select id="birthMonth" name="birthMonth" required>
+                                    <option value="">Tháng</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="birthYear">Năm sinh:</label>
+                                <select id="birthYear" name="birthYear" required>
+                                    <option value="">Năm</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">Giới tính:</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Chọn giới tính</option>
+                                <option value="male">Nam</option>
+                                <option value="female">Nữ</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="eventType">Loại sự kiện:</label>
+                            <select id="eventType" name="eventType" required>
+                                <option value="">Chọn sự kiện</option>
+                                <option value="dongTho">Động thổ</option>
+                                <option value="khaiTruong">Khai trương</option>
+                                <option value="nhapTrach">Nhập trạch</option>
+                                <option value="khoiHanh">Khởi hành</option>
+                                <option value="damCuoi">Đám cưới</option>
+                                <option value="anTang">An táng</option>
+                                <option value="khamBenh">Khám bệnh</option>
+                                <option value="kyHopDong">Ký hợp đồng</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fromMonth">Từ tháng:</label>
+                                <select id="fromMonth" name="fromMonth" required>
+                                    <option value="">Tháng</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="fromYear">Năm:</label>
+                                <select id="fromYear" name="fromYear" required>
+                                    <option value="">Năm</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-search"></i> Xem Ngày Tốt
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="result-section" id="resultSection" style="display: none;">
+                <div class="card">
+                    <h2><i class="fas fa-calendar-check"></i> Kết Quả Xem Ngày</h2>
+                    <div id="resultContent">
+                        <!-- Kết quả sẽ được hiển thị ở đây -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2025 Xem Ngày Tốt. Được phát triển với ❤️ để giúp bạn chọn ngày đẹp.</p>
+        </footer>
+    </div>
+
+    <!-- Ultra Enhanced JavaScript Files với AI và Machine Learning -->
+    <script src="ultra-precision-lunar.js"></script>
+    <script src="comprehensive-fengshui-db.js"></script>
+    <script src="advanced-personal-ai.js"></script>
+    <script src="realtime-astronomical.js"></script>
+    <script src="multilayer-scoring-system.js"></script>
+    <script src="ultra-enhanced-app.js"></script>
+    
+    <!-- Fallback system với graceful degradation -->
+    <script>
+        // Progressive enhancement với intelligent fallback
+        window.addEventListener('error', function(e) {
+            console.warn('Advanced features error, initializing fallback...', e.error);
+            
+            // Initialize basic fallback if ultra version fails
+            if (e.filename && e.filename.includes('ultra-')) {
+                console.log('Loading fallback system...');
+                var fallbackScripts = [
+                    'lunar-calculator.js',
+                    'good-day-calculator.js', 
+                    'app.js'
+                ];
+                
+                fallbackScripts.forEach(function(script) {
+                    var s = document.createElement('script');
+                    s.src = script;
+                    s.onerror = function() {
+                        console.warn('Fallback script failed:', script);
+                    };
+                    document.head.appendChild(s);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
